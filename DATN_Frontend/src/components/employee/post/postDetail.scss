@@ -1,0 +1,247 @@
+.heart:hover{
+    color: #fda88e;
+}
+
+.job-name {
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    margin-bottom: 4px;
+    line-height: 30px;
+    font-weight: 500;
+    color: rgb(51, 51, 51);
+
+    &:hover {
+        color: rgba(51, 51, 51, .9);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-open-check:checked ~ .overlay,
+.modal-open-check:checked ~ .modal-cv {
+    display: block;
+}
+
+.overlay,
+.modal-cv {
+    display: none;
+    transition: all 4s ease;
+    animation: fadeIn .4s ease;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    margin-bottom: 0;
+}
+
+// Modal CV
+.modal-cv {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 1001;
+    width: 700px;
+    min-height: 500px;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.modal-cv__job {
+    display: flex;
+    align-items: center;
+    height: 90px;
+    padding: 0 8px 24px;
+}
+
+.modal-cv__job-img {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding-top: 100%;
+    width: 64px;
+    max-height: 64px;
+    overflow: hidden;
+}
+
+.modal-cv__job-info {
+    flex: 1;
+    margin: 0 12px;
+}
+
+.modal-cv__job-name {
+    --line-height: 20px;
+    margin-bottom: 0;
+    font-size: 18px;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: var(--line-height);
+    max-height: calc(var(--line-height) * 2);
+    overflow: hidden;
+}
+
+.modal-cv__job-salary,
+.modal-cv__job-location {
+    margin-bottom: 0;
+    font-size: 13px;
+}
+
+.modal-cv__job-salary {
+    color: #ff7d55;
+}
+
+.modal-cv__job-location {
+    --line-height: 22px;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-height: var(--line-height);
+    height: var(--line-height);
+    overflow: hidden;
+}
+
+.modal-cv__job-icon {
+    font-size: 24px;
+    margin-top: -28px;
+}
+
+.modal-cv__form {
+    background-color: #f9fbff;
+    border-radius: 12px;
+    border: 1px solid #a0c1ff;
+    padding: 16px;
+    margin-top: -12px;
+}
+
+.modal-cv__form-info {
+    display: flex;
+    align-items: start;
+}
+
+.modal-cv__form-input {
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    h5 {
+        margin-bottom: 0;
+    }
+
+    input {
+        border-radius: 6px;
+        outline: none;
+        box-shadow: none;
+        border: 1px solid #d9d9d9;
+        padding: 9px 8px;
+        font-size: 14px;
+        line-height: 20px;
+        width: 100%;
+        margin-top: 12px;
+    }
+}
+
+.modal-cv__form-para {
+    margin-bottom: 8px;
+}
+
+.modal-cv__file-uploaded {
+    display: flex;
+    align-items: start;
+    border: 1px solid #a0c1ff;
+    border-radius: 12px;
+    padding: 12px;
+
+    input {
+        height: 23px;
+        width: 20px;
+    }
+}
+
+.modal-cv__file-info {
+    margin-left: 8px;
+}
+
+.modal-cv__file-title {
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.modal-cv__file-name {
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #939393;
+}
+
+.modal-cv__form-file {
+    margin-top: 16px;
+
+    .modal-cv__form-upload {
+        border: 1px dotted #a0c1ff;
+        border-radius: 12px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        color: #005aff;
+        font-weight: 500;
+        margin-top: 16px;
+
+        i {
+            margin-right: 8px;
+        }
+
+        p {
+            font-size: 12px;
+            color: #939393;
+        }
+    }
+}
+
+.modal-cv__form-link {
+    color: #005aff;
+    font-size: 12px;
+    float: right;
+    
+    &:hover {
+        color: #ff7d55;
+    }
+}
+
+.modal-cv__btn {
+    background-color: #ff7d55;
+    color: #fff;
+    width: 100%;
+    margin-top: 32px;
+    border-radius: 6px;
+    padding: 8px 0;
+
+    &:hover {
+        filter: brightness(120%);
+    }
+}
+

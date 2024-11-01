@@ -1,0 +1,90 @@
+.unsave{
+    color: red;
+}
+.unsave:hover{
+    background-color: rgb(242, 104, 104);
+    color: white;
+}
+
+@keyframes loading-icon {
+    from  {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.loading-icon {
+    animation: loading-icon 0.8s linear infinite;
+}
+
+// My Job
+h5.job-name {
+    --height: 20px;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    line-height: var(--height);
+    height: var(--height);
+}
+
+.avatar-wrapper {
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #005AFF;
+    background-color: #fff;
+
+    &:hover .avatar-action{
+        display: block;
+    }
+
+    .avatar-img {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 80px;
+        height: 80px;
+    }
+
+    .avatar-action {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.3);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        display: none;
+        animation: fadeIn linear .2s;
+
+        .avatar-btn {
+            z-index: 1;
+        }
+
+        i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 4px 6px;
+            border-radius: 6px;
+            background-color: #f1f1f1;
+        }
+    }
+
+}

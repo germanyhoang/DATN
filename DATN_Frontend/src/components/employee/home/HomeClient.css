@@ -1,0 +1,104 @@
+.home-banner {
+    background: #dbdbdb;
+    padding-bottom: 32px;
+}
+
+.home-banner__item {
+    width: 90%;
+    margin: 32px 0 0 50%;
+    transform: translateX(-50%);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.home-banner__company {
+    width: 90%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.content-title {
+    height: auto;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+}
+
+/* CONTENT */
+.home-content__jobs,
+.home-content__careers,
+.home-content__sug-job,
+.home-content__banner-b,
+.home-content__advises{
+    width: 90%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.job {
+    border: 1px solid rgba(241, 241, 241);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    margin-top: 16px;
+    transition: all ease .3s;
+}
+
+.job:hover {
+    background-color: rgb(249, 251, 255);
+    border: 1px solid rgb(207, 224, 255);
+}
+
+.img-wrapper {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.job-img {
+    width: 100%;
+    height: auto;
+}
+
+.job-info {
+    flex: 1;
+    margin-left: 16px;
+}
+
+
+.job-namee {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    font-size: 16px;
+    margin: 0;
+    flex: 1;
+    transition: all ease .3s;
+}
+
+.job-namee:hover {
+    color: #ff7d55;
+}
+
+.job-salary {
+    color: #ff7d55;
+}
+
+.job-location {
+    color: #333;
+}
+
+.home-content__sug-job {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}

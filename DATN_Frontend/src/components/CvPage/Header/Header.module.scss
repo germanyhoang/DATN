@@ -1,0 +1,73 @@
+// root
+.btn {
+    display: block;
+    background-color: rgba(0, 89, 255, .1);
+    color: #005aff;
+    margin-left: 12px;
+    padding: 0 20px;
+    height: 40px;
+    min-width: 100px;
+    border-radius: 6px;
+}
+
+.btn.btn--active {
+    background-color: #005aff;
+    color: #fff;
+}
+
+// Main Css
+.btn-wrapper {
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    padding: 12px 0;
+    margin-bottom: 16px;
+}
+
+.btn-wrapper__container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between  ;
+}
+
+.btn-preview,
+.btn-download,
+.btn-save,
+.btn-back {
+    span {
+        margin-left: 6px;
+    }
+}
+
+.btn-back {
+    display: block;
+    background-color: #eee;
+    border-radius: 6px;
+    height: 40px;
+    min-width: 100px;
+    padding: 8px 20px;
+    color: #526484;
+    transition: all .4s ease;
+
+    &:hover {
+        filter: brightness(94%);
+        color: #526484;
+    }
+}
+
+.btn-preview,
+.btn-download {
+    transition: all 0.4s ease;
+
+    &:hover {
+        background-color: #005aff;
+        color: #fff;
+    }
+}
+
+.btn-group {
+    display: flex;
+    align-items: center;
+}

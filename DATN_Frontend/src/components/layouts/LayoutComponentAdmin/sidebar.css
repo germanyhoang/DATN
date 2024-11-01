@@ -1,0 +1,8 @@
+.nk-menu-content {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+  }
+  
+  .nk-menu-icon {
+    margin-right: 5px; /* Khoảng cách giữa icon và text */
+  }

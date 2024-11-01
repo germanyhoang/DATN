@@ -1,0 +1,139 @@
+// infor
+.avatar-img-info {
+    padding-top: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+// Modal
+.modal-check:checked ~ .overlay-form,
+.modal-check:checked ~ .modal-form {
+    display: block;
+}
+
+.overlay-form {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: none;
+    animation: fadeIn .5s ease;
+    margin-bottom: 0;
+    height: 100vh;
+}
+
+.modal-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    min-height: 300px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    animation: fadeIn .5s ease;
+    z-index: 1001;
+    display: none;
+}
+
+.modal-form__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    margin-top: -4px;
+    padding: 0 4px 12px;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: -16px;
+        left: -16px;
+        border-bottom: 1px solid #eee;
+    }
+
+    h3 {
+        font-size: 22px;
+        margin-bottom: 0;
+        user-select: none;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+// Information Chidren
+.info-children {
+
+    &:hover>.info-children__btn {
+        display: flex;
+    }
+
+    .info-children__btn {
+        margin-top: 8px;
+        animation: fadeIn .5s ease;
+        display: none;
+
+        i {
+            padding: 12px;
+            border-radius: 50%;
+            transition: all .5s ease;
+            font-size: 16px;
+        }
+
+        &:hover>i {
+            background-color: rgb(233, 233, 242);
+        }
+    }
+}
+
+// Skills Form
+.skills-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fbfbfb;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    min-width: 100px;
+    margin-right: 8px;
+    padding: 7px 10px;
+
+    .skills-item__icon {
+        margin-left: 8px;
+        display: block;
+        height: 14px;
+        width: 14px;
+    }
+
+    .skills-item__remove {
+        margin-left: 8px;
+        display: none;
+        cursor: pointer;
+    }
+
+    &:hover>.skills-item__icon {
+        display: none;
+    }
+
+    &:hover>.skills-item__remove {
+        display: block;
+    }
+}
